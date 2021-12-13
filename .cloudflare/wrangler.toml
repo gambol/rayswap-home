@@ -1,0 +1,10 @@
+name = "rayswap-io"
+type = "webpack"
+account_id = "792461088a4c863230f3faee467094b1"
+# workers_dev = true
+route = "rayswap.io/*"
+zone_id = "caad8fe6f5c0392510853719df11c50f"
+
+[site]
+bucket = "../public"
+entry-point = "workers-site"

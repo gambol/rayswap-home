@@ -1,0 +1,21 @@
+{
+  "name": "rayswap-io",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "license": "MIT",
+  "author": "Ray Network",
+  "keywords": [
+    "blockchain",
+    "cardano",
+    "ray network",
+    "xray"
+  ],
+  "scripts": {
+    "deploy": "cd .cloudflare/ && wrangler publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ray-network/rayswap-io"
+  }
+}
