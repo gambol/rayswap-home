@@ -79,7 +79,7 @@ export function* FETCH_HISTORY() {
 }
 
 export function* SETUP() {
-  // yield call(FETCH_NETWORK_STATE)
+  yield call(FETCH_NETWORK_STATE)
   // yield call(FETCH_HISTORY)
   // yield call(FETCH_PRICES)
   // yield call(FETCH_POOLS)

@@ -1,9 +1,41 @@
-import React from "react"
+import React, { useState } from "react"
 import Menu from "@/components/menu"
+import { Input, message } from "antd"
 import { SVGGithub } from "@/svg"
 import * as style from "./style.module.scss"
 
 const Waiting = () => {
+  const [email, setEmail] = useState()
+  const [loading, setLoading] = useState(false)
+
+  const subscribe = async () => {
+    const validEmail = String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      )
+
+    if (validEmail) {
+      let formData = new FormData()
+      formData.append("EMAIL", email)
+      setLoading(true)
+      await fetch(
+        "https://raynetwork.us20.list-manage.com/subscribe/post?u=630230660ec54c50b0c34762c&id=844a6bbde0",
+        {
+          method: "post",
+          mode: "no-cors",
+          body: formData,
+        }
+      )
+      setLoading(false)
+      setEmail()
+      message.success("You have successfully subscribed!")
+    } else {
+      message.error("Please enter a valid email address.")
+    }
+  }
+
+
   return (
     <div className={style.container}>
       <Menu />
@@ -35,6 +67,19 @@ const Waiting = () => {
                 decentralization, censorship resistance, and security are
                 prioritized.
               </p>
+              <div className="max-width-400">
+                <Input.Search
+                  placeholder="Enter your email"
+                  allowClear
+                  enterButton="Subscribe"
+                  size="large"
+                  value={email}
+                  type="email"
+                  onSearch={() => subscribe()}
+                  onChange={(e) => setEmail(e.target.value)}
+                  loading={loading}
+                />
+              </div>
             </div>
           </div>
           <div className={style.info}>

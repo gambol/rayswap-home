@@ -37,6 +37,7 @@
 .promo {
   margin-bottom: rem(20);
   border-radius: rem(14);
+  padding-top: rem(40);
   padding-bottom: rem(40);
   display: flex;
   min-height: calc(100vh - 220px);
@@ -108,6 +109,20 @@
       max-width: rem(980);
       color: $dark-gray-2;
       margin-bottom: rem(40);
+    }
+
+    :global(.ant-input-group-addon) {
+      background: none;
+    }
+
+    :global(.ant-input-affix-wrapper) {
+      background: none;
+      border-color: $dark-gray-4;
+
+      input {
+        background: none;
+        color: $white;
+      }
     }
   }
 

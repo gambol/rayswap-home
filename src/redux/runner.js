@@ -1,11 +1,11 @@
-// import { useDispatch } from "react-redux"
+import { useDispatch } from "react-redux"
 
 const Runner = ({ children }) => {
-  // const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
-  // setInterval(() => {
-  //   dispatch({ type: "settings/FETCH_NETWORK_STATE" })
-  // }, 60 * 1000)
+  setInterval(() => {
+    dispatch({ type: "settings/FETCH_NETWORK_STATE" })
+  }, 60 * 1000)
 
   // setInterval(() => {
   //   dispatch({ type: "settings/FETCH_PRICES" })

@@ -1,6 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import Cookies from "@/components/Cookies"
+import Footer from "@/components/Footer"
 import * as style from "./style.module.scss"
 
 const MainLayout = ({ children }) => {
@@ -27,6 +28,9 @@ const MainLayout = ({ children }) => {
         />
       </Helmet>
       <div>{children}</div>
+      <div className="mt-auto">
+        <Footer />
+      </div>
       <Cookies />
     </div>
   )
