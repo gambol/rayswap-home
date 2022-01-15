@@ -47,7 +47,7 @@ const Footer = () => {
                   <div className="col-6 col-sm-4">
                     <div className="d-flex mb-4">
                       <h6 className="mb-0">
-                        <strong>Information</strong>
+                        <strong>Resources</strong>
                       </h6>
                     </div>
                     <ul className="list-unstyled mb-5">
