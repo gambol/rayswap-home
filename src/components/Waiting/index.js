@@ -49,7 +49,7 @@ const Waiting = () => {
           <div className={style.promo}>
             <div className={style.promoInner}>
               <div className="ray__title ray__title--inverse">
-                Cardano DEX Aggregator & Automated Market Maker DEX
+                Cardano DEX Aggregator & AMM DEX
               </div>
               <h1>
                 RaySwap <span className={style.promoInnerBadge}>SOON</span>

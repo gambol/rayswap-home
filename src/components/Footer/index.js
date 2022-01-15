@@ -113,6 +113,11 @@ const Footer = () => {
                           Documentation <i className="ri ri-arrow_up ri-ext" />
                         </a>
                       </li>
+                      <li>
+                        <a href="https://github.com/ray-network/">
+                          GitHub <i className="ri ri-arrow_up ri-ext" />
+                        </a>
+                      </li>
                     </ul>
                   </div>
                   <div className="col-6 col-sm-4 ">
